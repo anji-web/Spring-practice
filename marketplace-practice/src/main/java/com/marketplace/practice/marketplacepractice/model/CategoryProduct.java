@@ -24,4 +24,6 @@ public class CategoryProduct extends BaseModel {
 
   private String categoryName;
 
+  private String test;
+
 }
