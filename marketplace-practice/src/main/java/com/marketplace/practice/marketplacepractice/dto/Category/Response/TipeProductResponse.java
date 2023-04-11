@@ -13,8 +13,12 @@ import lombok.Setter;
 @NoArgsConstructor
 public class TipeProductResponse {
 
+  private int productId;
   private String namaProduct;
   private String description;
   private CategoryProduct productCategory;
+
+  private int statusCode;
+  private String result;
 
 }

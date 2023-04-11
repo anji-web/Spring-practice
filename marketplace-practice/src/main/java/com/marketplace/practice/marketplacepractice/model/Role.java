@@ -1,5 +1,6 @@
 package com.marketplace.practice.marketplacepractice.model;
 
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -14,17 +15,12 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class TipeProduct extends BaseModel
-{
+public class Role extends BaseModel {
 
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
-  private int idProduct;
+  private int roleId;
 
-  private String namaProduct;
-  private String description;
-  private int idKategori;
-
-  private String kategoriProduct;
+  private String roleName;
 
 }

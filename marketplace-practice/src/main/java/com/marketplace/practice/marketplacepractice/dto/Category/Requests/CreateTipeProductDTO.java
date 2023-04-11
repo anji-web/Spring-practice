@@ -12,8 +12,14 @@ import lombok.Setter;
 @NoArgsConstructor
 public class CreateTipeProductDTO {
 
+  private int productId;
+
   private String namaProduct;
   private String kategoriProduct;
   private String description;
+  private String result;
+
+  private int statusCode;
+
 
 }
