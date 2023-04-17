@@ -7,6 +7,7 @@ import com.marketplace.practice.marketplacepractice.model.TipeProduct;
 import com.marketplace.practice.marketplacepractice.repo.CategoryRepo;
 import com.marketplace.practice.marketplacepractice.repo.TipeProductRepo;
 import java.util.Date;
+import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -43,8 +44,18 @@ public class TipeProductService {
     response.setProductCategory(categoryProduct.get());
 
     return  response;
-
   }
 
+  public List<TipeProduct> getJenisProduct(){
+    return tipeProductRepo.findAll();
+  }
+
+  public TipeProduct updateTipeProduct (TipeProduct tipeProduct){
+    Optional<TipeProduct> product = tipeProductRepo.findById(tipeProduct.getIdProduct());
+    product.get().setNamaProduct(tipeProduct.getNamaProduct());
+    product.get().setDescription(tipeProduct.getDescription());
+    product.get().setIdKategori(tipeProduct.getIdKategori());
+    return product.get();
+  }
 
 }
