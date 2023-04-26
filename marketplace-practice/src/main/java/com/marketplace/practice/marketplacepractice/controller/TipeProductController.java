@@ -33,6 +33,6 @@ public class TipeProductController {
 
   @PutMapping("update")
   public TipeProduct updateTipeProduct(@RequestBody TipeProduct tipeProduct){
-    return updateTipeProduct(tipeProduct);
+    return tipeProductService.update(tipeProduct);
   }
 }

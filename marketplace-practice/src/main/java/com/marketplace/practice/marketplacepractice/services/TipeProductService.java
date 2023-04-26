@@ -50,11 +50,13 @@ public class TipeProductService {
     return tipeProductRepo.findAll();
   }
 
-  public TipeProduct updateTipeProduct (TipeProduct tipeProduct){
+  public TipeProduct update (TipeProduct tipeProduct){
     Optional<TipeProduct> product = tipeProductRepo.findById(tipeProduct.getIdProduct());
     product.get().setNamaProduct(tipeProduct.getNamaProduct());
     product.get().setDescription(tipeProduct.getDescription());
     product.get().setIdKategori(tipeProduct.getIdKategori());
+    tipeProduct.setUpdated_at(new Date());
+    tipeProductRepo.save(product.get());
     return product.get();
   }
 
