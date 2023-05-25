@@ -55,7 +55,7 @@ public class TipeProductService {
     product.get().setNamaProduct(tipeProduct.getNamaProduct());
     product.get().setDescription(tipeProduct.getDescription());
     product.get().setIdKategori(tipeProduct.getIdKategori());
-    tipeProduct.setUpdated_at(new Date());
+    product.get().setUpdated_at(new Date());
     tipeProductRepo.save(product.get());
     return product.get();
   }

@@ -17,5 +17,4 @@ public class CreateCategoryResponseDto {
   private int statusCode;
   private String result;
 
-
 }
